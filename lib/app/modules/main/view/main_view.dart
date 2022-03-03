@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import '../../../core/widgets/custom_app_bar.dart';
 import '../controller/main_controller.dart';
 
 class MainView extends GetView<MainController> {
@@ -7,6 +8,10 @@ class MainView extends GetView<MainController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold(
+      appBar: CustomAppBar(
+        appBarTitleText: 'News Explorer',
+      ),
+    );
   }
 }
