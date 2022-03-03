@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primarySwatch: MaterialColor(0xFF1DC3CA, colorSwatch),
         brightness: Brightness.light,
         primaryColor: AppColors.colorPrimary,
         textTheme: TextTheme(

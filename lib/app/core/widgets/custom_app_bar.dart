@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:news_explorer/app/core/values/app_style.dart';
 import '../values/app_colors.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
@@ -14,16 +14,16 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   }) : super(key: key);
 
   @override
-  Size get preferredSize => throw UnimplementedError();
+  Size get preferredSize => const Size.fromHeight(60.0);
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: AppColors.appBarColor,
       centerTitle: true,
-      elevation: 0,
       iconTheme: const IconThemeData(color: AppColors.appBarIconColor),
       title: Text(
         appBarTitleText,
+        style: appBarStyle,
       ),
     );
   }
