@@ -5,7 +5,6 @@ import 'package:news_explorer/app/modules/home/bindings/home_binding.dart';
 import 'package:news_explorer/app/modules/home/view/home_view.dart';
 import 'package:news_explorer/app/modules/settings/bindings/settings_binding.dart';
 import 'package:news_explorer/app/modules/source/bindings/source_binding.dart';
-import 'package:news_explorer/app/modules/source/controller/source_controller.dart';
 import 'package:news_explorer/app/modules/source/view/source_view.dart';
 import 'package:news_explorer/app/routes/app_route.dart';
 import '../modules/main/bindings/main_baindings.dart';
@@ -25,22 +24,22 @@ class AppPages {
     ),
     GetPage(
       name: Paths.HOME,
-      page: () => HomeView(),
+      page: () => const HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
       name: Paths.SOURCE,
-      page: () => SourceView(),
+      page: () => const SourceView(),
       binding: SourceBinding(),
     ),
     GetPage(
       name: Paths.SEARCH,
-      page: () => SearchView(),
+      page: () => const SearchView(),
       binding: SearchBinding(),
     ),
     GetPage(
       name: Paths.SETTING,
-      page: () => SettingsView(),
+      page: () => const SettingsView(),
       binding: SettingsBinding(),
     ),
   ];

@@ -4,8 +4,6 @@ import 'package:news_explorer/app/core/values/app_colors.dart';
 import 'package:news_explorer/app/modules/main/controller/Navigation_controller.dart';
 
 class NavigationBarView extends GetView<NavigationContorller> {
-  final item = [];
-
   NavigationContorller navigationBarController =
       Get.put(NavigationContorller());
 
