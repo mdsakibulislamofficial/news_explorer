@@ -7,8 +7,15 @@ class SearchView extends GetView<SearchController> {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Search'),
+    return  Padding(
+      padding: const EdgeInsets.only(top: 10),
+      child: TextFormField(
+        decoration: InputDecoration(hintText: "Search...",focusedBorder:OutlineInputBorder(
+borderSide: const BorderSide(color: Color.fromARGB(255, 216, 206, 206), width: 1.0),
+borderRadius: BorderRadius. circular(35.0),
+),),
+        
+      ),
     );
   }
 }
