@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:news_explorer/app/core/values/app_colors.dart';
 import '../controller/search_controller.dart';
 
 class SearchView extends GetView<SearchController> {
@@ -7,14 +8,20 @@ class SearchView extends GetView<SearchController> {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.only(top: 10),
-      child: TextFormField(
-        decoration: InputDecoration(hintText: "Search...",focusedBorder:OutlineInputBorder(
-borderSide: const BorderSide(color: Color.fromARGB(255, 216, 206, 206), width: 1.0),
-borderRadius: BorderRadius. circular(35.0),
-),),
-        
+    return Padding(
+      padding: const EdgeInsets.only(top: 15),
+      child: TextField(
+        autofocus: true,
+        decoration: InputDecoration(
+          hintText: "Search...",
+          border: OutlineInputBorder(
+            borderSide: const BorderSide(
+              color: AppColors.colorPrimary,
+              width: 1.0,
+            ),
+            borderRadius: BorderRadius.circular(35.0),
+          ),
+        ),
       ),
     );
   }

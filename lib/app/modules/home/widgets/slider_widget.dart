@@ -8,7 +8,7 @@ class SliderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
       child: CarouselSlider.builder(
         itemCount: 5,
         itemBuilder: (context, index, realIndex) {
