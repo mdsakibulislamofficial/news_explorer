@@ -4,11 +4,12 @@ import 'package:news_explorer/app/core/values/app_colors.dart';
 import 'package:news_explorer/app/modules/main/controller/Navigation_controller.dart';
 
 class NavigationBarView extends GetView<NavigationContorller> {
-  NavigationContorller navigationBarController =
-      Get.put(NavigationContorller());
+  NavigationBarView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    NavigationContorller navigationBarController =
+        Get.put(NavigationContorller());
     return Obx(() => BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: AppColors.colorPrimary,

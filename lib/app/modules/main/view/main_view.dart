@@ -7,11 +7,12 @@ import '../model/manu_code.dart';
 import 'navigation_bar_view.dart';
 
 class MainView extends GetView<MainController> {
-  MainView({Key? key}) : super(key: key);
+  const MainView({Key? key}) : super(key: key);
 
-  NavigationContorller navigationContorller = Get.put(NavigationContorller());
   @override
   Widget build(BuildContext context) {
+    NavigationContorller navigationContorller = Get.put(NavigationContorller());
+
     return Scaffold(
       appBar: const CustomAppBar(
         appBarTitleText: 'News Explorer',

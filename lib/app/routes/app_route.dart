@@ -7,6 +7,8 @@ abstract class Routes {
   static const SOURCE = Paths.SOURCE;
   static const SEARCH = Paths.SEARCH;
   static const SETTING = Paths.SETTING;
+  static const SOURCEDETAILS = Paths.SOURCEDETAILS;
+  static const NEWSDETAILS = Paths.NEWSDETAILS;
 }
 
 abstract class Paths {
@@ -15,4 +17,6 @@ abstract class Paths {
   static const SOURCE = '/SOURCE';
   static const SEARCH = '/SEARCH';
   static const SETTING = '/SETTING';
+  static const SOURCEDETAILS = '/SOURCEDETAILS';
+  static const NEWSDETAILS = '/NEWSDETAILS';
 }

@@ -11,7 +11,6 @@ class SearchView extends GetView<SearchController> {
     return Padding(
       padding: const EdgeInsets.only(top: 15),
       child: TextField(
-        autofocus: true,
         decoration: InputDecoration(
           hintText: "Search...",
           border: OutlineInputBorder(
