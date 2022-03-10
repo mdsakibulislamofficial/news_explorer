@@ -6,9 +6,9 @@ import '../../../core/values/app_colors.dart';
 import '../controller/home_controller.dart';
 
 class ToggleMenuWidget extends StatelessWidget {
-  int index;
-  String title;
-  ToggleMenuWidget({
+  final int index;
+  final String title;
+  const ToggleMenuWidget({
     Key? key,
     required this.index,
     required this.title,
