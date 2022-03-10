@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:news_explorer/app/modules/source/model/source_model.dart';
 
 class FeatchSource {
-  late Dio dio;
+  Dio dio = Dio();
 
   static String apikey = 'c968cdd426c8419d806177f4aba5228a';
   String sourceUrl =

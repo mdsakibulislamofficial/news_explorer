@@ -26,7 +26,7 @@ class SliderWidget extends StatelessWidget {
                 } else {
                   return sliderImage(
                     context,
-                    '',
+                    'https://picsum.photos/1024/700',
                     '',
                   );
                 }

@@ -25,7 +25,7 @@ class NewsDetails extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height - 138,
+            height: MediaQuery.of(context).size.height - 170,
             child: ListView(
               children: [
                 Image(

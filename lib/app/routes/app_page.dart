@@ -36,7 +36,7 @@ class AppPages {
     ),
     GetPage(
       name: Paths.SOURCEDETAILS,
-      page: () => const SourceDetailsView(),
+      page: () => SourceDetailsView(),
       binding: SourceBinding(),
     ),
     GetPage(
