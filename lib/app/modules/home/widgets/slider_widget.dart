@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:news_explorer/app/modules/home/model/all_news_model.dart';
+import 'package:news_explorer/app/network/featch_all_news.dart';
 
 class SliderWidget extends StatelessWidget {
   const SliderWidget({Key? key}) : super(key: key);
@@ -12,19 +14,35 @@ class SliderWidget extends StatelessWidget {
       child: CarouselSlider.builder(
         itemCount: 5,
         itemBuilder: (context, index, realIndex) {
-          return sliderImage(context, 'https://picsum.photos/600/300');
+          return FutureBuilder<List<Article>?>(
+              future: FeatchAllNews().featchAllNews(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return sliderImage(
+                    context,
+                    snapshot.data![index].urlToImage,
+                    snapshot.data![index].title,
+                  );
+                } else {
+                  return sliderImage(
+                    context,
+                    '',
+                    '',
+                  );
+                }
+              });
         },
         options: CarouselOptions(
           height: 200,
           autoPlay: true,
           viewportFraction: 1,
-          autoPlayInterval: const Duration(seconds: 3),
+          autoPlayInterval: const Duration(seconds: 4),
         ),
       ),
     );
   }
 
-  Widget sliderImage(context, imageUrl) {
+  Widget sliderImage(context, imageUrl, title) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Stack(
@@ -52,7 +70,7 @@ class SliderWidget extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                'Russia invades Ukraine: Live updates - CNN',
+                title,
                 style: GoogleFonts.roboto(
                   fontSize: 18,
                   fontWeight: FontWeight.w700,

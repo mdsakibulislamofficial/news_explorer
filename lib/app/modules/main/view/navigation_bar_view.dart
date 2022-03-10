@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:news_explorer/app/core/values/app_colors.dart';
@@ -6,10 +8,11 @@ import 'package:news_explorer/app/modules/main/controller/Navigation_controller.
 class NavigationBarView extends GetView<NavigationContorller> {
   NavigationBarView({Key? key}) : super(key: key);
 
+  NavigationContorller navigationBarController =
+      Get.put(NavigationContorller());
+
   @override
   Widget build(BuildContext context) {
-    NavigationContorller navigationBarController =
-        Get.put(NavigationContorller());
     return Obx(() => BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: AppColors.colorPrimary,

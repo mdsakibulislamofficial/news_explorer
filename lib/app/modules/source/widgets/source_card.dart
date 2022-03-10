@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SourceCard extends StatelessWidget {
-  String title;
-  String date;
-  SourceCard({Key? key, required this.date, required this.title})
+  final String title;
+  final String date;
+  const SourceCard({Key? key, required this.date, required this.title})
       : super(key: key);
 
   @override
