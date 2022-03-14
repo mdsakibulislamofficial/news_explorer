@@ -40,7 +40,7 @@ class Article {
 
   factory Article.fromJson(Map<String, dynamic> json) => Article(
         source: Source.fromJson(json["source"]),
-        author: json["author"] == null ? null : json["author"],
+        author: json["author"],
         title: json["title"],
         description: json["description"],
         url: json["url"],
@@ -60,7 +60,8 @@ class Source {
   String? name;
 
   factory Source.fromJson(Map<String, dynamic> json) => Source(
-        id: json["id"] == null ? null : json["id"],
+        // ignore: unnecessary_null_in_if_null_operators
+        id: json["id"] ?? null,
         name: json["name"],
       );
 }
