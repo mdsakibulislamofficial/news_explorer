@@ -9,9 +9,7 @@ class SourceDetailsView extends GetView<SourceDetailsController> {
 
   @override
   Widget build(BuildContext context) {
-    String date = '08-03-2022';
-    String title =
-        'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC';
+    var argumentData = Get.arguments;
     return Scaffold(
       appBar: const CustomAppBar(appBarTitleText: 'Google News'),
       body: Padding(
@@ -19,8 +17,8 @@ class SourceDetailsView extends GetView<SourceDetailsController> {
         child: ListView.builder(
           itemCount: 15,
           itemBuilder: (context, index) => SourceCard(
-            title: title,
-            date: date,
+            title: argumentData[0],
+            date: argumentData[1],
           ),
         ),
       ),
