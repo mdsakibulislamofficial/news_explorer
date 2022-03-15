@@ -19,6 +19,9 @@ dependencies:
   carousel_slider: ^4.0.0
   dio: ^4.0.4
   url_launcher: ^6.0.20
+  flutter_localizations:
+    sdk: flutter
+    version: ^0.0.0
 
 dev_dependencies:
   flutter_test:
@@ -28,3 +31,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true

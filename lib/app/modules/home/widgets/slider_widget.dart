@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -48,17 +49,15 @@ class SliderWidget extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: NetworkImage(
-                  imageUrl,
-                ),
-              ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20.0),
+            child: CachedNetworkImage(
+              fit: BoxFit.cover,
+              width: MediaQuery.of(context).size.width - 40,
+              imageUrl: imageUrl,
+              placeholder: (context, url) => const CircularProgressIndicator(),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
-            width: MediaQuery.of(context).size.width - 40,
           ),
           Container(
             alignment: Alignment.bottomLeft,

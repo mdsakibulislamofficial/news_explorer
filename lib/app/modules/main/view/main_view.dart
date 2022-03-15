@@ -5,6 +5,7 @@ import '../controller/Navigation_controller.dart';
 import '../controller/main_controller.dart';
 import '../model/manu_code.dart';
 import 'navigation_bar_view.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MainView extends GetView<MainController> {
   const MainView({Key? key}) : super(key: key);
@@ -14,8 +15,8 @@ class MainView extends GetView<MainController> {
     NavigationContorller navigationContorller = Get.put(NavigationContorller());
 
     return Scaffold(
-      appBar: const CustomAppBar(
-        appBarTitleText: 'News Explorer',
+      appBar: CustomAppBar(
+        appBarTitleText: AppLocalizations.of(context)!.appbartitle,
       ),
       body: Obx(
         () => IndexedStack(
